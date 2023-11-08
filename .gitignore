@@ -1,0 +1,53 @@
+# Compiled Object files, Static and Dynamic libraries (Shared Objects)
+*.o
+*.a
+*.so
+
+# Compiled Go files
+*.exe
+*.test
+*.prof
+
+# Compiled Terraform files
+.terraform/
+terraform.tfstate
+tf_generated
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Log files
+*.log
+
+# macOS specific files
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+
+# Go specific binaries
+/bin/
+/pkg/
+
+# Dependency directories
+/vendor/
+
+# Build output
+/dist/
+
+# Temporary files
+*.tmp
+
+# Environment variables file
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+Icon
+ehthumbs.db
+Thumbs.db
+
+# Custom user configuration
+config.yaml
