@@ -1,15 +1,21 @@
 package main
 
 import (
-	"context"
 	"fmt"
+	sportMonks "inplay-football-service/api"
 
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func handleRequest(ctx context.Context, event interface{}) (string, error) {
-	fmt.Println("event", event)
-	return "Hello world", nil
+func handleRequest() {
+	// Fetch current fixture from external api
+	res, err := sportMonks.GetTodaysFixtures()
+	if err != nil {
+		fmt.Println("Error in GetTodaysFixtures:", err)
+		return
+	}
+	fmt.Printf("Results: %v\n", res)
+	return
 }
 
 func main() {
